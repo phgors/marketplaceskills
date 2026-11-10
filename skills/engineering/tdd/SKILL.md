@@ -1,11 +1,20 @@
 ---
 name: tdd
-description: Test-driven development. Use when the user wants to build features or fix bugs test-first, mentions "red-green-refactor", or wants integration tests.
+description: Test-driven development. Use ONLY when the user explicitly asks for TDD, test-first, or "red-green-refactor", or when the change touches high-risk/complex logic (protocol parsing & encoding/decoding, crypto/authentication, routing & load-balancing decisions, concurrency & state machines, configuration migration). Not the default: ordinary work is implemented directly, then verified with existing tests.
 ---
 
 # Test-Driven Development
 
 TDD is the red → green loop. This skill is the reference that makes that loop produce tests worth keeping: what a good test is, where tests go, the anti-patterns, and the rules of the loop. Every section applies on every cycle: consult them before and during the loop, not after.
+
+## Not the default
+
+This skill is not the default way to build. Before running the loop, confirm one of these holds:
+
+- The user **explicitly asked** for TDD, test-first, or red-green-refactor.
+- The change touches **high-risk/complex logic**: protocol parsing & encoding/decoding, crypto/authentication, routing & load-balancing decisions, concurrency & state machines, configuration migration.
+
+If neither holds, do not run this loop. Implement the code directly, run the relevant existing tests to verify, and state in your reply which changes are not covered by existing tests.
 
 When exploring the codebase, read `GLOSSARY.md` (if it exists) so test names and interface vocabulary match the project's domain language, and respect ADRs in the area you're touching.
 

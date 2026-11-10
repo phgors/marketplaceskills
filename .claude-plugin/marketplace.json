@@ -1,10 +1,10 @@
 {
-  "name": "mattpocock",
+  "name": "phgors-skills",
   "owner": {
     "name": "Matt Pocock",
     "url": "https://www.aihero.dev"
   },
-  "description": "Matt Pocock's skills for real engineering, as an installable Claude Code plugin.",
+  "description": "Fork of Matt Pocock's skills plugin: identical skills, but TDD is opt-in (explicit request or high-risk logic) instead of the default build path. Upstream: https://github.com/mattpocock/skills",
   "plugins": [
     {
       "name": "mattpocock-skills",
